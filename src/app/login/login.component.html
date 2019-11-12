@@ -1,0 +1,49 @@
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+        <span class="title-center">Engineering Edge Center</span>
+    </mat-toolbar-row>
+</mat-toolbar>
+
+<mat-card>
+    <mat-card-title>
+        EEC Sign in
+    </mat-card-title>
+
+    <mat-card-content>
+        <mat-form-field class="full-width-input">
+            <input matInput placeholder="Name" [(ngModel)]="name" required>
+        </mat-form-field>
+        <br/>
+        <mat-form-field class="full-width-input">
+            <input matInput placeholder="ID" [(ngModel)]="id" required>
+        </mat-form-field>
+        <br/>
+        <mat-form-field class="full-width-input">
+            <mat-label>Major</mat-label>
+            <mat-select [(ngModel)]="selectedMajor" name="major" required>
+                <mat-option *ngFor="let major of majors" [value]="major.value">
+                    {{major.viewValue}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+        <br/> 
+        <mat-form-field class="full-width-input">
+            <mat-label>Reason For Coming</mat-label>
+            <mat-select [(ngModel)]="selectedReason" name="reason" required>
+                <mat-option *ngFor="let reason of reasons" [value]="reason.value">
+                    {{reason.viewValue}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+        <br/>
+        <mat-form-field class="full-width-input">
+            <textarea matInput placeholder="Comment" [(ngModel)]="comment"></textarea>
+        </mat-form-field>
+
+        <mat-spinner [style.display]="showSpinner ? 'block' : 'none'"></mat-spinner>
+    </mat-card-content>
+
+    <mat-card-actions>
+        <button mat-raised-button (click)="login()" [color]="'blue'">Submit</button>
+    </mat-card-actions>
+</mat-card>

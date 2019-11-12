@@ -1,0 +1,24 @@
+mat-card {
+  width: 60%;
+  margin: 10% auto;
+  text-align: center;
+}
+.title-center {
+    flex: 1 1 auto;
+    text-align: center;
+  }
+.mat-card-title{
+  font-size: 32px;
+}
+.full-width-input {
+  width: 70%;
+}
+.mat-toolbar.mat-primary {
+  background: #FF8200;
+  color: #ffffff;
+}
+
+.mat-blue {
+  background-color: #041E42;
+  color: #fff;
+}
